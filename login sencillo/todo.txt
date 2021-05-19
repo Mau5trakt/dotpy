@@ -1,0 +1,3 @@
+pues de momento nada solo conectar la db con el programa y piola
+bueno aunque tengo que hacr la db para los libros xDDDDDDDDDDDDDDD y creo que 
+tengo que hacer el campo de los roles en la db 
