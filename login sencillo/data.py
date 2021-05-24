@@ -1,18 +1,11 @@
 from pymongo import MongoClient
 
-client = MongoClient('localhost')
-db = client['prueba']
+client = MongoClient('mongodb+srv://usuarios:RgvAZFpFu9LYm5RF@cluster0.8oeno.mongodb.net/ex01?retryWrites=true&w=majority')
 
-col = db['personas']
-
-col.insert_one({
-    'edad': 21,
-    'nombre': 'Mickey',
-    'apeliido': 'Thompson',
-    'intereses': 'Ser basado'
-})
-
-print(db.list_collection_names()) #Mostrar todos los datos de la colección
-
-for documento in col.find({}):
-    print(documento)
+db = client['ex01']
+col = db['corprueb']
+#print(client.list_database_names()) ver todas mis bases de datos
+#print(db.list_collection_names()) ver todas las colecciones
+for documento in col.find({'# telefónico':8233323}):   #Query de consulta de mi base de datos
+    a = documento
+    print(a)

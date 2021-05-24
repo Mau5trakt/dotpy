@@ -1,4 +1,8 @@
+#from pymongo import MongoClient
+
+#client = MongoClient('mongodb+srv://usuarios:RgvAZFpFu9LYm5RF@cluster0.8oeno.mongodb.net/ex01?retryWrites=true&w=majority')
 import random
+
 print("Bienvenido al sistema, ingrese sus credenciales a continuación")
 users = ["enal986"]
 op = ""
