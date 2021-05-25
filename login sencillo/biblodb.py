@@ -34,7 +34,29 @@ while op not in ['R', 'I']:
                 print("Registro correcto")
 
     if op == 'I':
-        print("ayeye quita conga")
+        init = ""
+        while init != True:
+            init = input("Ingrese su nombre de usuario: \n")
+            a = col.find_one({'uname':init})
+            if a is None:
+                print("Usuario no encontrado")
+            else:
+                init = True
+                print("Usted ha iniciado sesión correctamente")
+                menu = ""
+                while menu not in [1,2,3]:
+                    menu = int(input(" -1 Buscar libro \n -2 Ver mis libros prestados \n -3 Salir "))
+
+                    if menu == 1:
+                        print("aqui va el buscador de la db para los libros")
+                    elif menu == 2:
+                        print("aqui va el buscador para los libros que ha prestado el usuario ")
+                    elif menu == 3:
+                        print("Usted salido del sistema")
+
+
+
+
 
 
 
