@@ -6,6 +6,6 @@ db = client['ex01']
 col = db['corprueb']
 #print(client.list_database_names()) ver todas mis bases de datos
 #print(db.list_collection_names()) ver todas las colecciones
-for documento in col.find({'# telefónico':8233323}):   #Query de consulta de mi base de datos
+for documento in col.find({'# telefónico':82333234}):   #Query de consulta de mi base de datos
     a = documento
     print(a)
