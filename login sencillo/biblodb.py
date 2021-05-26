@@ -22,12 +22,14 @@ while op not in ['R', 'I']:
 
             else:
                 confir = input(f"Su nombre es {name}, su apellido es {surname} y su número de telefono es {num}?[S/N]")
+                #Funcion que crea el nombre de usuario
                 uname = ((name[0:2]) + (surname[0:2]) + str(random.randint(0, 999))).lower()
-                bususer = col.find_one({'uname':uname})
-                while bususer is not None:
+                bususer = col.find_one({'uname':uname}) #Buscar el nombre de usuario generado
+                while bususer is not None:  #Si el nombre de usuario ya existe en el sistema se genera otro
                     uname = ((name[0:2]) + (surname[0:2]) + str(random.randint(0, 999))).lower()
                 print(f"Su nombre de usario es: {uname}")
-                col.insert_one({
+
+                col.insert_one({                            #Insertar el nombre de usuario en la db
                     'Nombre':name,
                     'Apellido':surname,
                     '# telefónico': num,
@@ -38,14 +40,14 @@ while op not in ['R', 'I']:
         init = ""
         while init != True:
             init = input("Ingrese su nombre de usuario: \n")
-            a = col.find_one({'uname':init})
+            a = col.find_one({'uname':init})                #Buscar el nombre de usuario en la db
             if a is None:
                 print("Usuario no encontrado")
             else:
                 init = True
                 print("Usted ha iniciado sesión correctamente")
                 menu = ""
-                while menu not in [1,2,3]:
+                while menu not in [1,2,3]: #Opciones al ingresar
                     menu = int(input(" -1 Buscar libro \n -2 Ver mis libros prestados \n -3 Salir \n"))
 
                     if menu == 1:
@@ -60,7 +62,7 @@ while op not in ['R', 'I']:
 
                             if otp == 1:
                                 bsc = input("Ingrese el título del libro:")
-                                for libro in lib.find({"título":bsc}):
+                                for libro in lib.find({"título":bsc}): #Metodo de búsqueda
                                     a = libro
                                     print(a)
                                 rw =input("¿Desea hacer otra busqueda? [S/N]")
