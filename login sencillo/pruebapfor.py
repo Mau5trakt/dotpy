@@ -6,4 +6,4 @@ for aleatnum in range (11):
     print(aleatnum)
 
 
-print(f"a{numeritos}")
+print(f"{numeritos}")
