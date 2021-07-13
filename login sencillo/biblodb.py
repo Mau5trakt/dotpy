@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
 client = MongoClient(
-    'mongodb+srv://usuarios:RgvAZFpFu9LYm5RF@cluster0.8oeno.mongodb.net/ex01?retryWrites=true&w=majority')
+    'mongodb+srv://biblodb:5SdBM3SOGlK01NnK@cluster0.8oeno.mongodb.net/ex01?retryWrites=true&w=majority')
 import random
 
 db = client['ex01']
