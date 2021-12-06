@@ -150,8 +150,7 @@ while op not in ['R', 'I']:
                                                             elif rec == 4:
                                                                 print("Usted ha salido del sistema")
                                                                 break
-                                                                #working on this part at @30/05/21 12: 33 i hope come back at 15:00h
-
+                                                                
                                                 else:
                                                     print("Este libro no se encuentra disponible para su prestamo")
 
